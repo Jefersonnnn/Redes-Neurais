@@ -10,10 +10,25 @@ import numpy as np
 #entradas = np.array([[0,0],[0,1],[1,0],[1,1]])
 #saidas = np.array([0,0,0,1])
 
+entradas = np.array([[0,0,0],
+                     [0,0,1],
+                     [0,1,1],
+                     [1,1,1],
+                     [1,0,0],
+                     [1,0,1],
+                     [1,1,0]
+                     ])
+saidas = np.array([0,1,1,1,1,1])
+
 #Tabela verdade operador OU
-entradas = np.array([[0,0],[0,1],[1,0],[1,1]])
-saidas = np.array([0,1,1,1])
-pesos = np.array([0.0,0.0])
+#entradas = np.array([[0,0],[0,1],[1,0],[1,1]])
+#saidas = np.array([0,1,1,1])
+
+#Tabela verdade operador XOR
+#entradas = np.array([[0,0],[0,1],[1,0],[1,1]])
+#saidas = np.array([0,1,1,0])
+#pesos = np.array([0.0,0.0])
+pesos = np.array([0.0,0.0,0.0])
 taxaAprendizagem = 0.1
 
 def stepfunction(soma):
@@ -46,3 +61,5 @@ print(calculaSaida(entradas[0]))
 print(calculaSaida(entradas[1]))
 print(calculaSaida(entradas[2]))
 print(calculaSaida(entradas[3]))
+print(calculaSaida(entradas[4]))
+print(calculaSaida(entradas[5]))
